@@ -27,7 +27,7 @@ body {
   background-color: hsl(257, 40%, 49%);
   background-image: url("/images/bg-mobile.svg");
   background-repeat: no-repeat;
-  min-width: 375px;
+  max-width: 375px;
 }
 
 .container {
