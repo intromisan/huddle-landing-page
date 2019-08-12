@@ -24,10 +24,7 @@ section {
 }
 
 body {
-  /* background-color: hsl(257, 40%, 49%);
-  background-image: url("/images/bg-mobile.svg");
-  background-repeat: no-repeat; */
-  background: url('../images/bg-mobile.svg') no-repeat hsl(257, 40%, 49%);
+  background: hsl(257, 40%, 49%) url('/images/bg-mobile.svg') no-repeat;
   min-width: 375px;
 }
 
@@ -66,15 +63,15 @@ main .mockup img {
   width: 100%;
 }
 
-/* Main - Discription */
+/* Main - Description */
 
-main .discription h1 {
+main .description h1 {
   font-size: 2.2rem;
   font-weight: 700;
   margin: 1.5rem 0;
 }
 
-main .discription p {
+main .description p {
   letter-spacing: .3px;
   font-size: 1.5rem;
   font-family: 'Open Sans', sans-serif;
@@ -82,7 +79,7 @@ main .discription p {
   margin-bottom: 3rem;
 }
 
-main .discription .btn {
+main .description .btn {
   border: 1px solid #fff;
   border-radius: 2rem;
   background-color: #fff;
@@ -96,12 +93,89 @@ main .discription .btn {
 
 svg {
   fill: #fff;
-  /* display: inline-block;
-  margin: 2rem 0; */
   margin: 0 .7rem;
 }
 
+@media screen and (min-width: 1024px) {
+  /* Global Styles */
 
+  body {
+    height: 100vh;
+    background: hsl(257, 40%, 49%) url('/images/bg-desktop.svg') no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 4% 5% 0 5%;
+    height: 100vh;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  /* Header */
+
+  header {
+    height: 15%;
+  }
+
+  header img {
+    width: 15rem;
+  }
+
+  /* Main */
+
+  main {
+    display: grid;
+    grid-template-columns: 52% auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "mockup description"
+    "social social";
+  }
+
+  /* Main - Mockup */
+
+  main .mockup {
+    padding: 0;
+    grid-area: mockup;
+  }
+
+  /* Main - Description */
+
+  main .description {
+    text-align: start;
+    padding-left: 5rem;
+    grid-area: description;
+  }
+
+  main .description h1 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  
+  main .description p {
+    letter-spacing: .3px;
+    font-size: 1.3rem;
+  }
+  
+  main .description .btn {
+    border-radius: 3rem;
+    padding: 1.2rem 4.5rem;
+    font-size: 1.3rem;
+  }
+
+  /* Main - Social */
+
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: social;
+  }
+} 
 
 
 
