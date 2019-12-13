@@ -24,7 +24,10 @@ section {
 }
 
 body {
-  background: hsl(257, 40%, 49%) url('/images/bg-mobile.svg') no-repeat;
+  background: hsl(257, 40%, 49%);
+  background-image: url('bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   min-width: 375px;
 }
 
@@ -91,9 +94,16 @@ main .description .btn {
 
 /* Main - Social */
 
+.social {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
 svg {
   fill: #fff;
-  margin: 0 .7rem;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -101,7 +111,7 @@ svg {
 
   body {
     height: 100vh;
-    background: hsl(257, 40%, 49%) url('/images/bg-desktop.svg') no-repeat;
+    background: hsl(257, 40%, 49%) url('bg-desktop.svg') no-repeat;
     background-size: contain;
     display: flex;
     flex-direction: column;
@@ -172,12 +182,26 @@ svg {
 
   .social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     grid-area: social;
+    margin: 0 0 0 80%;
+    width: 15%;
   }
-} 
 
+  .social svg {
+    width: 40%;
+  }
+}
 
+@media screen and (min-width: 1440px) {
 
+  html {
+    font-size: 14px;
+  }
 
+  .social {
+    margin-top: -1.5rem;
+  }
+  
+}
 
